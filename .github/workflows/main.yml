@@ -14,6 +14,6 @@ jobs:
           password: ${{ secrets.GHCR_IO_TOKEN }}
       - name: Docker pull and push
         run: |
-          docker pull gcr.io/cloud-provider-vsphere/csi/ci/syncer:latest  
-          docker tag  gcr.io/cloud-provider-vsphere/csi/ci/syncer:latest  ghcr.io/oriapps/cloud-provider-vsphere/csi/ci/syncer:latest       
-          docker push ghcr.io/oriapps/cloud-provider-vsphere/csi/ci/syncer:latest
+          docker pull k8s.gcr.io/sig-storage/csi-provisioner:v3.0.0  
+          docker tag  k8s.gcr.io/sig-storage/csi-provisioner:v3.0.0  ghcr.io/oriapps/sig-storage/csi-provisioner:v3.0.0       
+          docker push ghcr.io/oriapps/sig-storage/csi-provisioner:v3.0.0
